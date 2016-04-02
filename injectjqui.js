@@ -1,13 +1,8 @@
 javascript: (function() {
 
-    function debug(m) {
-        if (typeof DEBUG_MODE !== 'undefined' && DEBUG_MODE === true) {
-            console.log(m);
-        }
-    }
-
     if (typeof _jqinjected !== 'undefined' && _jqinjected === true)
         return;
+        
     var jqui = document.createElement('script'),
         css = document.createElement('style'),
         jq = document.createElement('script'),
@@ -24,7 +19,6 @@ javascript: (function() {
     body.appendChild(css);
     body.appendChild(jq);
     body.appendChild(jqui);
-    console.log('jQuery + jQUery UI Injected');
     _jqinjected = true;
     return _jqinjected;
 })();
